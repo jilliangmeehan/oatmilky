@@ -15,13 +15,17 @@ public_folder: "/static/img"
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
 publish_mode: editorial_workflow
+editor:
+  preview: false
 collections:
   - label: "Letters"
-    name: "letter"
+    label_singular: "letter"
+    name: "letters"
     folder: "src/posts"
     create: true
     identifier_field: number
-    slug: number
+    slug: "{{number}}"
+    summary: "Letter {{number}} : {{month}}-{{day}}"
     fields:
       - label: "📋 Info"
         name: "info"
