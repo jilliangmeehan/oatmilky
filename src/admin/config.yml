@@ -23,7 +23,7 @@ collections:
     name: "letters"
     folder: "src/posts"
     create: true
-    # summary: info.title
+    summary: 💌 Letter {{title}}
     fields:
       - { label: "💌 Letter number", name: "title", widget: "number" }
       - label: "📋 Info"
