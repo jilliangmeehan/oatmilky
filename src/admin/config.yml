@@ -26,12 +26,13 @@ collections:
     summary: 💌 Letter {{title}}
     fields:
       - { label: "💌 Letter number", name: "title", widget: "number" }
-      - label: "📋 Info"
-        name: "info"
+      - { label: "🖋 Description", name: "description", widget: "string", required: false }
+      - { label: "🗓 Publish Date", name: "date", widget: "datetime" }
+      - label: "📋 Tweet"
+        name: "tweet"
         widget: object
+        collapsed: true
         fields:
-          - { label: "🖋 Description", name: "description", widget: "string", required: false }
-          - { label: "🗓 Publish Date", name: "date", widget: "datetime" }
           - { label: "🖼 Tweet", name: "tweet", widget: "image", allow_multiple: false, choose_url: false, required: false }
           - { label: "🔗 Link to tweet", name: "tweet-url", widget: "string", required: false }
       - label: "📝 Letter"
