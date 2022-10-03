@@ -12,26 +12,65 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "Blog"
-    name: "blog"
+  - label: "Letters"
+    name: "letters"
     folder: "src/posts"
     create: true
+    slug: "{{fields.number}}"
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Letter number", name: "number", widget: "number" }
+      - { label: "Email subject line", name: "subject", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - widget: select
-        label: "tags"
-        name: "tags"
-        multiple: true
-        create: true
-        options: ["Tags", "created", "from", "config.yml"]
-  - label: "Settings"
-    name: "settings"
+      - { label: "Tweet", name: "tweet", widget: "image", allow_multiple: false, choose_url: false }
+      - { label: "Link to tweet", name: "tweet-url", widget: "string" }
+      - label: "On..."
+        name: "on"
+        object: widget
+        fields:
+          - { label: "Topic", name: "topic", widget: "string" }
+          - { label: "Jillian's thoughts", name: "jillian-topic", widget: "markdown" }
+          - { label: "Summer's thoughts", name: "summer-topic", widget: "markdown" }
+      - label: "Summer's picks"
+        name: "summer"
+        object: widget
+        fields:
+          - { label: "Title", name: "summer-title01", widget: "string" }
+          - { label: "Description", name: "summer-desc01", widget: "markdown" }
+          - label: "Tag"
+            widget: select
+            name: "summer-tag01"
+            create: true
+            options: ["📽️ Movie", "📖 Read", "🧠 Wellness", "📺 TV", "🔗 Link", "🎙️ Podcast", "🎮 Game", "🍽️ Food", "💡 Idea", "📱 Tech", "🎶 Music", "💌 Newsletter", "🎉 Event", "🚨 Emergency"]
+          - { label: "Title", name: "summer-title02", widget: "string" }
+          - { label: "Description", name: "summer-desc02", widget: "markdown" }
+          - label: "Tag"
+            widget: select
+            name: "summer-tag02"
+            create: true
+            options: ["📽️ Movie", "📖 Read", "🧠 Wellness", "📺 TV", "🔗 Link", "🎙️ Podcast", "🎮 Game", "🍽️ Food", "💡 Idea", "📱 Tech", "🎶 Music", "💌 Newsletter", "🎉 Event", "🚨 Emergency"]
+      - label: "Jillian's picks"
+        name: "jillian"
+        object: widget
+        fields:
+          - { label: "Title", name: "jillian-title01", widget: "string" }
+          - { label: "Description", name: "jillian-desc01", widget: "markdown" }
+          - label: "Tag"
+            widget: select
+            name: "jillian-tag01"
+            create: true
+            options: ["📽️ Movie", "📖 Read", "🧠 Wellness", "📺 TV", "🔗 Link", "🎙️ Podcast", "🎮 Game", "🍽️ Food", "💡 Idea", "📱 Tech", "🎶 Music", "💌 Newsletter", "🎉 Event", "🚨 Emergency"]
+          - { label: "Title", name: "jillian-title02", widget: "string" }
+          - { label: "Description", name: "jillian-desc02", widget: "markdown" }
+          - label: "Tag"
+            widget: select
+            name: "jillian-tag02"
+            create: true
+            options: ["📽️ Movie", "📖 Read", "🧠 Wellness", "📺 TV", "🔗 Link", "🎙️ Podcast", "🎮 Game", "🍽️ Food", "💡 Idea", "📱 Tech", "🎶 Music", "💌 Newsletter", "🎉 Event", "🚨 Emergency"]
+  - label: "Other stuff"
+    name: "other stuff"
     editor:
       preview: false
     files:
@@ -66,3 +105,7 @@ collections:
           - { label: Name, name: name, widget: string }
           - { label: Author, name: author, widget: string }
           - { label: URL, name: url, widget: string }
+commit_messages:
+    create: 🌱 create {{collection}} “{{slug}}”
+    update: 🖍 update {{collection}} “{{slug}}”
+    delete: 🗑 delete {{collection}} “{{slug}}”
