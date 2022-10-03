@@ -35,7 +35,7 @@ collections:
           - { label: "Summer's thoughts", name: "summer-topic", widget: "markdown" }
       - label: "Summer's picks"
         name: "summer"
-        object: widget
+        widget: object
         fields:
           - { label: "Title", name: "summer-title01", widget: "string" }
           - { label: "Description", name: "summer-desc01", widget: "markdown" }
@@ -53,7 +53,7 @@ collections:
             options: ["📽️ Movie", "📖 Read", "🧠 Wellness", "📺 TV", "🔗 Link", "🎙️ Podcast", "🎮 Game", "🍽️ Food", "💡 Idea", "📱 Tech", "🎶 Music", "💌 Newsletter", "🎉 Event", "🚨 Emergency"]
       - label: "Jillian's picks"
         name: "jillian"
-        object: widget
+        widget: object
         fields:
           - { label: "Title", name: "jillian-title01", widget: "string" }
           - { label: "Description", name: "jillian-desc01", widget: "markdown" }
