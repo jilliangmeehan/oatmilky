@@ -18,18 +18,18 @@ publish_mode: editorial_workflow
 editor:
   preview: false
 collections:
-  - label: "Letters"
+  - label: "Letters to Summer"
     label_singular: "letter"
     name: "letters"
     folder: "src/posts"
     create: true
-    summary: title
+    # summary: info.title
     fields:
+      - { label: "💌 Letter number", name: "title", widget: "number" }
       - label: "📋 Info"
         name: "info"
         widget: object
         fields:
-          - { label: "💌 Letter number", name: "title", widget: "number" }
           - { label: "🖋 Description", name: "description", widget: "string", required: false }
           - { label: "🗓 Publish Date", name: "date", widget: "datetime" }
           - { label: "🖼 Tweet", name: "tweet", widget: "image", allow_multiple: false, choose_url: false, required: false }
