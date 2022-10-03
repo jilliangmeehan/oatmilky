@@ -21,6 +21,7 @@ collections:
     folder: "src/posts"
     create: true
     identifier_field: number
+    slug: number
     fields:
       - label: "📋 Info"
         name: "info"
