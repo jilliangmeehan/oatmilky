@@ -13,7 +13,7 @@ local_backend: true
 publish_mode: editorial_workflow
 collections:
   - label: "Letters"
-    name: "letters"
+    name: "letter"
     folder: "src/posts"
     create: true
     slug: "{{fields.number}}"
@@ -21,8 +21,8 @@ collections:
       preview: false
     fields:
       - { label: "💌 Letter number", name: "number", widget: "number" }
-      - { label: "👋 Title", name: "title", widget: "hidden", default: "Letter {{number}}" }
-      - { label: "📧 Email subject line", name: "subject", widget: "hidden", default: "{{description}}" }
+      - { label: "👋 Title", name: "title", widget: "hidden", default: "Letter {{letter.fields.number}}" }
+      - { label: "📧 Email subject line", name: "subject", widget: "hidden", default: "{{letter.fields.description}}" }
       - { label: "🖋 Description", name: "description", widget: "string" }
       - { label: "🗓 Publish Date", name: "date", widget: "datetime" }
       - { label: "🖼 Tweet", name: "tweet", widget: "image", allow_multiple: false, choose_url: false }
