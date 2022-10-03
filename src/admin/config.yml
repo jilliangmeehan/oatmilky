@@ -24,9 +24,10 @@ collections:
     folder: "src/posts"
     create: true
     identifier_field: number
-    slug: "{{number}}"
-    summary: "Letter {{number}} : {{month}}-{{day}}"
+    slug: "{{identifier_field}}"
+    summary: "Letter {{identifier_field}}"
     fields:
+      - { label: "Title", name: "title", default: indentifier_field, widget: "hidden" }
       - label: "📋 Info"
         name: "info"
         widget: object
