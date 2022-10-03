@@ -3,9 +3,9 @@ backend:
   name: git-gateway
   branch: main
   commit_messages:
-    create: 🌱 create {{collection}} “{{slug}}”
-    update: 🖍 update {{collection}} “{{slug}}”
-    delete: 🗑 delete {{collection}} “{{slug}}”
+    create: 🌱 created “{{slug}}”
+    update: 🖍 updated “{{slug}}”
+    delete: 🗑 deleted “{{slug}}”
   ### enable below lines for github integration ###
   # name: github
   # repo: jilliangmeehan/oatmilky
