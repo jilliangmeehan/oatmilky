@@ -23,10 +23,9 @@ collections:
     name: "letters"
     folder: "src/posts"
     create: true
-    identifier_field: number
-    slug: "{{title}}"
+    identifier_field: fields.number
+    slug: identifier_field
     fields:
-      - { label: "Title", name: "title", default: "Letter {{identifier_field}}", widget: "string" }
       - label: "📋 Info"
         name: "info"
         widget: object
