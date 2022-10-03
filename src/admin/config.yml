@@ -21,8 +21,6 @@ collections:
     folder: "src/posts"
     create: true
     identifier_field: number
-    editor:
-      preview: false
     fields:
       - label: "📋 Info"
         name: "info"
@@ -34,8 +32,9 @@ collections:
           - { label: "🖼 Tweet", name: "tweet", widget: "image", allow_multiple: false, choose_url: false }
           - { label: "🔗 Link to tweet", name: "tweet-url", widget: "string" }
       - label: "📝 Letter"
-        name: "body"
+        name: "content"
         widget: object
+        collapsed: true
         fields:
           - label: "💭 On..."
             name: "on"
@@ -47,6 +46,7 @@ collections:
           - label: "😴 Summer's picks"
             name: "summer"
             widget: object
+            collapsed: true
             fields:
               - { label: "01 - Summer's pick", name: "summer-title01", widget: "string" }
               - { label: "01 - Description", name: "summer-desc01", widget: "markdown" }
@@ -65,6 +65,7 @@ collections:
           - label: "🍵 Jillian's picks"
             name: "jillian"
             widget: object
+            collapsed: true
             fields:
               - { label: "01 - Jillian's pick", name: "jillian-title01", widget: "string" }
               - { label: "01 - Description", name: "jillian-desc01", widget: "markdown" }
