@@ -26,7 +26,7 @@ collections:
     identifier_field: number
     slug: "{{title}}"
     fields:
-      - { label: "Title", name: "title", default: indentifier_field, widget: "hidden" }
+      - { label: "Title", name: "title", default: identifier_field, widget: "hidden" }
       - label: "📋 Info"
         name: "info"
         widget: object
