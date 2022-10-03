@@ -27,7 +27,7 @@ collections:
     fields:
       - { label: "💌 Letter number", name: "title", widget: "number" }
       - { label: "🖋 Description", name: "description", widget: "string", required: false }
-      - { label: "🗓 Publish Date", name: "date", widget: "datetime" }
+      - { label: "🗓 Publish Date", name: "date", widget: "datetime", time_format: false }
       - label: "📋 Tweet"
         name: "tweet"
         widget: object
