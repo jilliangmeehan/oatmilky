@@ -10,7 +10,7 @@ layout: blog
             <h2 class="font-bold text-3xl text-gray-900 mb-2">
                 <a href="{{ post.url | url }}">
                     {% if post.data.title %}
-                        {{ post.data.title }}
+                       Letter {{ post.data.title }}
                     {% else %}
                         Untitled
                     {% endif %}
@@ -19,8 +19,6 @@ layout: blog
             <p class="text-base leading-6 text-gray-500 mb-3">
                 <time>
                     {{ post.date | readableDate }}
-                    by
-                    <a>{{ post.data.author }}</a>
 
                 </time>
             </p>

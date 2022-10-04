@@ -7,6 +7,10 @@ module.exports = {
     extend: {
       colors: {},
     },
+    fontFamily: {
+      serif: ['Times New Roman', 'serif'],
+      mono: ['Merriweather', 'serif']
+    },
   },
   variants: {},
   plugins: [require("@tailwindcss/typography")],

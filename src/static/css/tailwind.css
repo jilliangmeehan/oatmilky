@@ -4,14 +4,21 @@
 
 /*Your Custom CSS Goes here*/
 
+html {
+  @apply font-serif;
+}
+
 h1 {
-  @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
+  @apply font-mono text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
+}
+
+h2 {
+  @apply font-mono;
 }
 
 h3 {
-  @apply text-2xl font-bold mb-3;
+  @apply font-mono text-2xl font-bold mb-3;
 }
-
 /* Syntax Highlighting*/
 
 body :not(pre) > code[class*="language-"],

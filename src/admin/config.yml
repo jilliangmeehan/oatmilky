@@ -36,56 +36,56 @@ collections:
           - { label: "🖼 Tweet", name: "tweet", widget: "image", allow_multiple: false, choose_url: false, required: false }
           - { label: "🔗 Link to tweet", name: "tweet-url", widget: "string", required: false }
       - label: "📝 Letter"
-        name: "content"
+        name: "letter"
         widget: object
         collapsed: true
         fields:
           - label: "💭 On..."
-            name: "on"
+            name: "intro"
             widget: object
             fields:
               - { label: "💬 Topic", name: "topic", widget: "string", required: false }
-              - { label: "🍵 Jillian's thoughts", name: "jillian-topic", widget: "markdown", required: false }
-              - { label: "😴 Summer's thoughts", name: "summer-topic", widget: "markdown", required: false }
+              - { label: "🍵 Jillian's thoughts", name: "jillian", widget: "markdown", required: false }
+              - { label: "😴 Summer's thoughts", name: "summer", widget: "markdown", required: false }
           - label: "😴 Summer's picks"
-            name: "summer"
+            name: "summer_rec"
             widget: object
             collapsed: true
             fields:
-              - { label: "01 - Summer's pick", name: "summer-title01", widget: "string", required: false }
-              - { label: "01 - Description", name: "summer-desc01", widget: "markdown", required: false }
+              - { label: "01 - Summer's pick", name: "title01", widget: "string", required: false }
+              - { label: "01 - Description", name: "desc01", widget: "markdown", required: false }
               - label: "01 - Tag"
                 widget: select
-                name: "summer-tag01"
+                name: "tag01"
                 create: true
                 required: false
                 options: ["📽️ Movie", "📖 Read", "🧠 Wellness", "📺 TV", "🔗 Link", "🎙️ Podcast", "🎮 Game", "🍽️ Food", "💡 Idea", "📱 Tech", "🎶 Music", "💌 Newsletter", "🎉 Event", "🚨 Emergency"]
-              - { label: "02 - Summer's pick", name: "summer-title02", widget: "string", required: false }
-              - { label: "02 - Description", name: "summer-desc02", widget: "markdown", required: false }
+              - { label: "02 - Summer's pick", name: "title02", widget: "string", required: false }
+              - { label: "02 - Description", name: "desc02", widget: "markdown", required: false }
               - label: "02 - Tag"
                 widget: select
-                name: "summer-tag02"
+                name: "tag02"
                 create: true
                 required: false
                 options: ["📽️ Movie", "📖 Read", "🧠 Wellness", "📺 TV", "🔗 Link", "🎙️ Podcast", "🎮 Game", "🍽️ Food", "💡 Idea", "📱 Tech", "🎶 Music", "💌 Newsletter", "🎉 Event", "🚨 Emergency"]
           - label: "🍵 Jillian's picks"
-            name: "jillian"
+            name: "jillian_rec"
             widget: object
             collapsed: true
             fields:
-              - { label: "01 - Jillian's pick", name: "jillian-title01", widget: "string", required: false }
-              - { label: "01 - Description", name: "jillian-desc01", widget: "markdown", required: false }
+              - { label: "01 - Jillian's pick", name: "title01", widget: "string", required: false }
+              - { label: "01 - Description", name: "desc01", widget: "markdown", required: false }
               - label: "01 - Tag"
                 widget: select
-                name: "jillian-tag01"
+                name: "tag01"
                 create: true
                 required: false
                 options: ["📽️ Movie", "📖 Read", "🧠 Wellness", "📺 TV", "🔗 Link", "🎙️ Podcast", "🎮 Game", "🍽️ Food", "💡 Idea", "📱 Tech", "🎶 Music", "💌 Newsletter", "🎉 Event", "🚨 Emergency"]
-              - { label: "02 - Jillian's pick", name: "jillian-title02", widget: "string", required: false }
-              - { label: "02 - Description", name: "jillian-desc02", widget: "markdown", required: false }
+              - { label: "02 - Jillian's pick", name: "title02", widget: "string", required: false }
+              - { label: "02 - Description", name: "desc02", widget: "markdown", required: false }
               - label: "02 - Tag"
                 widget: select
-                name: "jillian-tag02"
+                name: "tag02"
                 create: true
                 required: false
                 options: ["📽️ Movie", "📖 Read", "🧠 Wellness", "📺 TV", "🔗 Link", "🎙️ Podcast", "🎮 Game", "🍽️ Food", "💡 Idea", "📱 Tech", "🎶 Music", "💌 Newsletter", "🎉 Event", "🚨 Emergency"]
