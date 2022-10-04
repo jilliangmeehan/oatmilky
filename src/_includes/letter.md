@@ -10,8 +10,9 @@ prism: true
             <time> {{ date | readableDate }}</time>
         </p>
     </div>
-    <article class="prose lg:prose-xl my-4 mx-auto">
-        {{ content }}
-    </article>
 
+    <article class="prose lg:prose-xl my-4 mx-auto">
+        {{ content | safe }}
+    </article>
+    
 </div>

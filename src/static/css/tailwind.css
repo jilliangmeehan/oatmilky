@@ -4,16 +4,8 @@
 
 /*Your Custom CSS Goes here*/
 
-html {
-  @apply font-serif;
-}
-
 h1 {
   @apply font-mono text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
-}
-
-h2 {
-  @apply font-mono;
 }
 
 h3 {
