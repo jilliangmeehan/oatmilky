@@ -9,7 +9,6 @@ prism: true
         <p class="text-center text-base leading-6 font-medium text-gray-500">
             <time> {{ date | readableDate }}</time>
         </p>
-
     </div>
     <article class="prose lg:prose-xl my-4 mx-auto">
         {{ content }}
