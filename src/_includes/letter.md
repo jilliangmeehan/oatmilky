@@ -12,7 +12,7 @@ prism: true
 
     </div>
     <article class="prose lg:prose-xl my-4 mx-auto">
-        {{ content | safe }}
+        {{ content }}
     </article>
 
 </div>
